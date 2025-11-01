@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GROWZIO APPS – Premium Apps Subscriptions in Pakistan</title>
+  <meta name="description" content="Buy genuine premium apps subscriptions in Pakistan. Netflix, Spotify, Canva Pro, ExpressVPN at lowest prices. Pay via JazzCash, Easypaisa, Binance." />
+  <meta name="keywords" content="premium apps Pakistan, buy Netflix cheap, Canva Pro Pakistan, Spotify Premium, app subscriptions" />
+  <meta name="author" content="GROWZIO">
+
+  <!-- Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CC5500',
+            secondary: '#005F73',
+            dark: '#0a0a0a',
+            lightbg: '#F8F9FA'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --primary: #CC5500;
+      --primary-dark: #A04300;
+      --secondary: #005F73;
+      --secondary-dark: #004953;
+      --dark: #0a0a0a;
+      --light-bg: #F8F9FA;
+      --light-text: #FFFFFF;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--light-bg);
+      color: #333;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+    
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    
+    .btn { display: inline-block; background: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(204, 85, 0, 0.2); }
+    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+    .btn-outline:hover { background: var(--primary); color: white; }
+    
+    .section { padding: 4rem 0; }
+    .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; position: relative; display: inline-block; }
+    .section-title::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: var(--primary); border-radius: 2px; }
+    .section-subtitle { text-align: center; color: #666; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+    
+    .nav-link { color: var(--light-text); text-decoration: none; transition: all 0.3s ease; }
+    .nav-link:hover { color: var(--primary); }
+    
+    .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    .product-img { height: 180px; display: flex; justify-content: center; align-items: center; padding: 1rem; background: #f9f9f9; }
+    .product-img img { max-height: 100%; max-width: 100%; object-fit: contain; }
+    .product-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+    .product-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--secondary); }
+    .product-description { color: #666; font-size: 0.9rem; margin-bottom: 1rem; flex-grow: 1; }
+    .product-price { display: flex; align-items: center; margin-bottom: 1rem; }
+    .original-price { text-decoration: line-through; color: #999; margin-right: 0.5rem; font-size: 0.9rem; }
+    .discounted-price { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+    .usd-price { font-size: 0.8rem; color: #666; margin-left: 0.5rem; }
+    .add-to-cart-btn { width: 100%; padding: 0.75rem; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; margin-bottom: 0.5rem; }
+    .add-to-cart-btn:hover { background: var(--primary-dark); }
+    .view-details-btn { width: 100%; padding: 0.75rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+    .view-details-btn:hover { background: var(--primary); color: white; }
+    
+    .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background: #25D366; color: #fff; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 0 0 15px rgba(37, 211, 102, 0.35); z-index: 1000; display: flex; align-items: center; justify-content: center; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    
+    .cart-count { position: absolute; top: -8px; right: -8px; background: var(--primary); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; }
+    
+    dialog { border: none; border-radius: 12px; }
+    dialog::backdrop { background: rgba(0,0,0,.7); }
+    
+    #cart-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; margin: 0; max-width: 100%; max-height: 100%; overflow-y: auto; background: var(--light-bg); color: #333; border-radius: 0; padding: 2rem; box-shadow: none; z-index: 1001; }
+    .cart-modal-close { position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: #666; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 1002; }
+    .cart-modal-close:hover { background: rgba(0,0,0,0.1); color: #333; }
+    .cart-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #eee; }
+    
+    .quantity-controls { display: flex; align-items: center; gap: 8px; }
+    .quantity-btn { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: white; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: bold; transition: all 0.2s ease; }
+    .quantity-btn:hover { background: var(--primary-dark); transform: scale(1.1); }
+    .quantity-input { width: 40px; text-align: center; border: 1px solid #ddd; border-radius: 4px; padding: 5px; font-weight: bold; }
+    .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee; }
+    .cart-item-info { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+    .cart-item-name { font-weight: 600; color: var(--secondary); }
+    .cart-item-price { color: var(--primary); font-weight: 600; }
+    .cart-item-total { font-weight: 600; color: var(--secondary); }
+    .cart-item-controls { display: flex; align-items: center; gap: 15px; }
+    .cart-remove-btn { background: none; border: none; color: #ff4444; cursor: pointer; font-size: 1.2rem; transition: all 0.2s ease; }
+    .cart-remove-btn:hover { color: #cc0000; transform: scale(1.1); }
+    
+    #added-to-cart-modal { 
+      text-align:center; 
+      padding: 2rem; 
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .added-modal-icon { font-size: 3rem; color: #4CAF50; margin-bottom: 1rem; }
+    .added-modal-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--secondary); }
+    .added-modal-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .added-modal-actions .btn { flex: 1; }
+    
+    .hero-section { background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(0, 95, 115, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; background-attachment: fixed; }
+    
+    /* Payment Method Styles */
+    .payment-method-selector { margin-bottom: 1.5rem; }
+    .payment-method-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .payment-method-option { 
+      flex: 1; 
+      min-width: 120px; 
+      padding: 12px; 
+      border: 2px solid #ddd; 
+      border-radius: 8px; 
+      text-align: center; 
+      cursor: pointer; 
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .payment-method-option:hover { border-color: var(--primary); }
+    .payment-method-option.selected { border-color: var(--primary); background-color: rgba(204, 85, 0, 0.05); }
+    .payment-method-icon { font-size: 1.5rem; }
+    .payment-method-name { font-weight: 600; font-size: 0.9rem; }
+    
+    /* Policy Modals */
+    .policy-modal { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--light-bg);
+      z-index: 2000;
+      overflow-y: auto;
+      display: none;
+    }
+    .policy-modal.active {
+      display: block;
+    }
+    .policy-modal-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .policy-modal-header {
+      background-color: var(--secondary);
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .policy-header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .policy-logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .policy-logo span {
+      color: var(--primary);
+      margin-right: 5px;
+    }
+    .policy-close-btn {
+      color: white;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    .policy-close-btn:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+    .policy-body {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    .policy-title {
+      color: var(--secondary);
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+    .policy-last-updated {
+      text-align: center;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+    .policy-section {
+      margin-bottom: 2rem;
+    }
+    .policy-section h2 {
+      color: var(--secondary);
+      margin: 2rem 0 1rem;
+      font-size: 1.8rem;
+    }
+    .policy-section h2:first-child {
+      margin-top: 0;
+    }
+    .policy-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    .policy-section ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .policy-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    .contact-info {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      border-left: 4px solid var(--primary);
+    }
+    .important-note {
+      background: rgba(204, 85, 0, 0.1);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .important-note p {
+      color: var(--primary);
+      font-weight: 600;
+      margin: 0;
+    }
+    .policy-card {
+      margin-bottom: 2rem;
+    }
+    .policy-section h3 {
+      color: var(--primary);
+      margin: 1.5rem 0 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .section-title { font-size: 2rem; }
+      .products-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+      .cart-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .cart-item-controls { width: 100%; justify-content: space-between; }
+      .payment-method-option { min-width: 100px; }
+      .policy-body {
+        padding: 1.5rem;
+      }
+      .policy-title {
+        font-size: 2rem;
+      }
+      .policy-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="main-content">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-secondary backdrop-blur border-b border-primary">
+      <div class="container py-3 flex items-center justify-between">
+        <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="font-extrabold text-xl text-white flex items-center">
+          <span class="text-primary mr-1">🔥</span> GROWZIO
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm font-medium">
+          <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="nav-link hover:text-primary">Home</a>
+          <a href="#apps" class="nav-link text-primary">Apps</a>
+          <a href="#contact" class="nav-link hover:text-primary">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="btn-open-cart" class="relative rounded-xl px-3 py-2 border border-primary hover:shadow-sm transition flex items-center gap-2 text-primary hover:bg-primary hover:text-white">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="cart-count">0</span>
+          </button>
+          <button id="mobile-toggle" class="md:hidden p-2 rounded-md border border-primary text-primary">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="bg-secondary-dark border-t border-primary md:hidden hidden">
+        <div class="px-4 py-3 flex flex-col gap-2">
+          <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="py-2 nav-link">Home</a>
+          <a href="#apps" class="py-2 nav-link text-primary">Apps</a>
+          <a href="#contact" class="py-2 nav-link">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="section hero-section text-white">
+      <div class="container text-center">
+        <h1 class="section-title mb-4 text-white" data-aos="fade-down">PREMIUM APPS SUBSCRIPTIONS</h1>
+        <p class="section-subtitle text-gray-200" data-aos="fade-up" data-aos-delay="200">Get premium app subscriptions at the lowest prices in Pakistan with instant delivery. 100% genuine subscriptions with warranty.</p>
+        <div class="flex flex-wrap justify-center gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-primary/20 rounded-lg p-3 flex items-center gap-2"> <i class="fa-solid fa-bolt text-primary"></i> <span>Instant Delivery</span> </div>
+          <div class="bg-primary/20 rounded-lg p-3 flex items-center gap-2"> <i class="fa-solid fa-shield-halved text-primary"></i> <span>100% Genuine</span> </div>
+          <div class="bg-primary/20 rounded-lg p-3 flex items-center gap-2"> <i class="fa-solid fa-headset text-primary"></i> <span>24/7 Support</span> </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps" class="section bg-white">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="section-title">All Premium Apps</h2>
+          <p class="section-subtitle">Choose from our wide selection of premium app subscriptions</p>
+        </div>
+        <div class="products-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="apps-container">
+          <!-- Apps will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-lightbg">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">CONTACT US</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Reach out to us for orders, support, or any questions</p>
+        <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="300">
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-4">Business Hours</h3>
+            <p class="text-gray-600">24/7 Support Available</p>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+            <p class="text-gray-600 mb-2"><i class="fa-brands fa-whatsapp text-green-500 mr-2"></i> WhatsApp: <strong>+92 319 5179084</strong></p>
+            <p class="text-gray-600"><i class="fa-solid fa-envelope text-primary mr-2"></i> Email: <strong>info@growzio.com</strong></p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+            <div class="flex justify-center gap-6 text-2xl">
+              <a href="https://wa.me/923195179084" target="_blank" class="text-green-500 hover:scale-110 transition"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.tiktok.com/@its_hannni?_t=ZT-8yvAKY2JQp3&_r=1" target="_blank" class="text-pink-500 hover:scale-110 transition"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" target="_blank" class="text-pink-600 hover:scale-110 transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Back to Home Button Section -->
+    <section class="section bg-lightbg text-center pt-0">
+        <div class="container">
+            <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="btn">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Back To Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-gray-200 py-12">
+      <div class="container">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">GROWZIO</h3>
+            <p class="mb-4">Your trusted source for premium digital services in Pakistan at affordable prices.</p>
+            <div class="flex gap-4">
+              <a href="https://wa.me/923195179084" target="_blank" class="text-gray-300 hover:text-primary"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.tiktok.com/@its_hannni" target="_blank" class="text-gray-300 hover:text-primary"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" class="text-gray-300 hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
+            <ul class="space-y-2">
+              <li><a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="text-gray-300 hover:text-primary">Home</a></li>
+              <li><a href="#apps" class="text-gray-300 hover:text-primary">Apps</a></li>
+              <li><a href="#contact" class="text-gray-300 hover:text-primary">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">SUPPORT</h3>
+            <ul class="space-y-2">
+              <li><a href="#" id="privacy-policy-link-footer" class="text-gray-300 hover:text-primary">Privacy Policy</a></li>
+              <li><a href="#" id="terms-link-footer" class="text-gray-300 hover:text-primary">Terms of Service</a></li>
+              <li><a href="#" id="refund-policy-link-footer" class="text-gray-300 hover:text-primary">Refund Policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">CONTACT</h3>
+            <p class="mb-2"><i class="fa-brands fa-whatsapp text-green-500 mr-2"></i> WhatsApp: +92 319 5179084</p>
+            <p class="mb-4"><i class="fa-solid fa-envelope text-primary mr-2"></i> Email: info@growzio.com</p>
+            <p class="text-sm">24/7 Support Available</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+          <p>© 2025 GROWZIO. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODALS & FLOATING BUTTONS (Outside of main-content) -->
+
+  <a href="https://wa.me/923195179084" target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <dialog id="cart-modal">
+    <button class="cart-modal-close"><i class="fa-solid fa-times"></i></button>
+    <div class="container mx-auto py-6 px-4 h-full flex flex-col">
+      <div class="cart-modal-header">
+        <h2 class="text-2xl font-bold text-secondary">YOUR CART</h2>
+      </div>
+      <div id="cart-items" class="flex-1 overflow-y-auto mb-4"></div>
+      <div class="border-t border-gray-300 pt-4 mb-4">
+        <div class="flex justify-between items-center text-lg">
+          <p class="font-bold">Total:</p>
+          <p class="font-bold text-xl text-primary" id="cart-total">0 PKR</p>
+        </div>
+      </div>
+      
+      <!-- Payment Method Selection in Cart -->
+      <div class="payment-method-selector">
+        <h3 class="font-bold mb-2">Select Payment Method:</h3>
+        <div class="payment-method-options">
+          <div class="payment-method-option" data-method="jazzcash">
+            <div class="payment-method-icon text-green-600"><i class="fa-solid fa-mobile-alt"></i></div>
+            <div class="payment-method-name">JazzCash</div>
+          </div>
+          <div class="payment-method-option" data-method="easypaisa">
+            <div class="payment-method-icon text-blue-600"><i class="fa-solid fa-money-bill-wave"></i></div>
+            <div class="payment-method-name">Easypaisa</div>
+          </div>
+          <div class="payment-method-option" data-method="binance">
+            <div class="payment-method-icon text-yellow-500"><i class="fa-brands fa-bitcoin"></i></div>
+            <div class="payment-method-name">Binance</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-between gap-4">
+        <button id="continue-shopping" class="px-6 py-3 rounded bg-gray-200 hover:bg-gray-300 transition flex-1">Continue Shopping</button>
+        <button id="proceed-to-payment" class="px-6 py-3 rounded bg-primary hover:bg-primary-dark text-white transition flex-1">Proceed to Checkout</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="added-to-cart-modal">
+    <div class="added-modal-icon"><i class="fa-solid fa-check-circle"></i></div>
+    <h2 class="added-modal-title">Item Added to Cart!</h2>
+    <p id="added-item-name">Your item has been successfully added to your cart.</p>
+    <div class="added-modal-actions">
+      <button class="btn btn-outline" id="continue-shopping-added">Continue Shopping</button>
+      <button class="btn" id="view-cart">View Cart</button>
+    </div>
+  </dialog>
+  
+  <!-- Payment Page (Initially hidden) -->
+  <div id="payment-page" class="hidden">
+    <header class="bg-secondary">
+      <div class="container mx-auto px-4 flex items-center justify-between py-3">
+        <a href="#" class="font-extrabold text-xl text-white flex items-center">
+          <span class="text-primary mr-1">🔥</span> GROWZIO APPS
+        </a>
+      </div>
+    </header>
+    <div class="container mx-auto py-8 px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+          <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold mb-2">Complete Your Payment</h1>
+            <p class="text-gray-600">Select your preferred payment method</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <h2 class="text-xl font-bold mb-4">Order Summary</h2>
+            <div id="payment-order-items"></div>
+            <div class="border-t border-gray-300 mt-4 pt-4">
+              <div class="flex justify-between items-center text-lg">
+                <span class="font-bold">Total:</span>
+                <span class="font-bold text-xl text-primary" id="payment-total">0 PKR</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-1 gap-6 mb-6">
+            <div class="payment-option" data-method="jazzcash" style="display:none;">
+              <h3 class="font-bold text-lg mb-3 text-center">JazzCash Details</h3>
+              <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <p class="mb-3"><strong>Account Number:</strong> 0300 1234567</p>
+                <p class="mb-3"><strong>Account Name:</strong> GROWZIO APPS</p>
+                <p class="mb-3"><strong>Instructions:</strong></p>
+                <ol class="list-decimal pl-5 space-y-2">
+                  <li>Send payment to the JazzCash number above</li>
+                  <li>Take a screenshot of the transaction</li>
+                  <li>Send the screenshot via WhatsApp</li>
+                </ol>
+              </div>
+            </div>
+            <div class="payment-option" data-method="easypaisa" style="display:none;">
+              <h3 class="font-bold text-lg mb-3 text-center">Easypaisa Details</h3>
+              <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <p class="mb-3"><strong>Account Number:</strong> 0312 3456789</p>
+                <p class="mb-3"><strong>Account Name:</strong> GROWZIO APPS</p>
+                <p class="mb-3"><strong>Instructions:</strong></p>
+                <ol class="list-decimal pl-5 space-y-2">
+                  <li>Send payment to the Easypaisa number above</li>
+                  <li>Take a screenshot of the transaction</li>
+                  <li>Send the screenshot via WhatsApp</li>
+                </ol>
+              </div>
+            </div>
+            <div class="payment-option" data-method="binance" style="display:none;">
+              <h3 class="font-bold text-lg mb-3 text-center">Binance (Crypto) Details</h3>
+              <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <p class="mb-3"><strong>USDT TRC20 Address:</strong> Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                <p class="mb-3"><strong>Instructions:</strong></p>
+                <ol class="list-decimal pl-5 space-y-2">
+                  <li>Send USDT (TRC20) to the address above</li>
+                  <li>Take a screenshot of the transaction</li>
+                  <li>Send the screenshot via WhatsApp</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors" onclick="confirmPayment()">I've Made the Payment</button>
+          <div class="mt-4 text-center">
+            <button onclick="goBackToShopping()" class="text-primary hover:underline"><i class="fa-solid fa-arrow-left mr-2"></i> Back to Shopping</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-secondary text-white py-6 mt-8">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2025 GROWZIO APPS. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Policy Modals -->
+  <div id="privacy-policy-modal" class="policy-modal">
+    <div class="policy-modal-header">
+      <div class="policy-header-content">
+        <div class="policy-logo">
+          <span>🔥</span> GROWZIO
+        </div>
+        <button class="policy-close-btn" data-modal="privacy-policy-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="policy-modal-content">
+      <div class="policy-body">
+        <h1 class="policy-title">Privacy Policy</h1>
+        <p class="policy-last-updated">Last updated: January 2025</p>
+        
+        <div class="policy-section">
+          <h2>1. Information We Collect</h2>
+          <p>We may collect the following types of information:</p>
+          <ul>
+            <li>Personal identification information (name, email address, phone number)</li>
+            <li>Payment information (processed securely through third-party providers)</li>
+            <li>Account credentials for the services you purchase</li>
+            <li>Communication records when you contact our support team</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>2. How We Use Your Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Process your orders and deliver purchased services</li>
+            <li>Provide customer support and respond to inquiries</li>
+            <li>Improve our services and user experience</li>
+            <li>Send important updates about your account or our services</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>3. Data Security</h2>
+          <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>4. Third-Party Services</h2>
+          <p>We use third-party payment processors (JazzCash, Easypaisa, Binance) to handle financial transactions. These providers have their own privacy policies governing the use of your information.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>5. Your Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access the personal information we hold about you</li>
+            <li>Request correction of inaccurate information</li>
+            <li>Request deletion of your personal information</li>
+            <li>Object to processing of your personal information</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>6. Contact Us</h2>
+          <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+          <div class="contact-info">
+            <p><strong>Email:</strong> privacy@growzio.com</p>
+            <p><strong>WhatsApp:</strong> +92 319 5179084</p>
+            <p><strong>Business Hours:</strong> 24/7 Support Available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="terms-of-service-modal" class="policy-modal">
+    <div class="policy-modal-header">
+      <div class="policy-header-content">
+        <div class="policy-logo">
+          <span>🔥</span> GROWZIO
+        </div>
+        <button class="policy-close-btn" data-modal="terms-of-service-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="policy-modal-content">
+      <div class="policy-body">
+        <h1 class="policy-title">Terms of Service</h1>
+        <p class="policy-last-updated">Last updated: January 2025</p>
+        
+        <div class="policy-section">
+          <h2>1. Acceptance of Terms</h2>
+          <p>By accessing or using GROWZIO's services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>2. Services Description</h2>
+          <p>GROWZIO provides digital services including premium app subscriptions, IPTV services, gaming top-ups, digital bundles, and eBooks. All services are delivered electronically after successful payment verification.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>3. Account Registration</h2>
+          <p>Some services may require account registration. You agree to provide accurate and complete information during registration and to keep this information updated.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>4. Payment Terms</h2>
+          <p>All payments are processed through secure third-party payment processors. By making a purchase, you agree to:</p>
+          <ul>
+            <li>Provide accurate payment information</li>
+            <li>Pay all charges incurred by your account</li>
+            <li>Authorize GROWZIO to charge your chosen payment method</li>
+            <li>Understand that all sales are final unless otherwise stated in our Refund Policy</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>5. Service Delivery</h2>
+          <p>Digital services are typically delivered instantly after payment verification. In some cases, delivery may take up to 24 hours. You will receive your service credentials via WhatsApp or email.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>6. User Responsibilities</h2>
+          <p>You agree to:</p>
+          <ul>
+            <li>Use services only for lawful purposes</li>
+            <li>Not share account credentials with unauthorized users</li>
+            <li>Not attempt to circumvent any security measures</li>
+            <li>Not use services to infringe on intellectual property rights</li>
+            <li>Comply with all applicable laws and regulations</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>7. Intellectual Property</h2>
+          <p>All content, trademarks, and data on this website, including software, databases, text, graphics, icons, hyperlinks, and designs are the property of GROWZIO or licensed to GROWZIO.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>8. Limitation of Liability</h2>
+          <p>GROWZIO shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use our services.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>9. Service Modifications</h2>
+          <p>GROWZIO reserves the right to modify or discontinue any service with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of service.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>10. Termination</h2>
+          <p>We may terminate or suspend your access to our services immediately, without prior notice, for conduct that we believe violates these Terms of Service or is harmful to other users, us, or third parties, or for any other reason.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>11. Governing Law</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of Pakistan, without regard to its conflict of law provisions.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>12. Changes to Terms</h2>
+          <p>We reserve the right to modify these terms at any time. We will notify users of any changes by updating the "Last updated" date of these Terms of Service.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2>13. Contact Information</h2>
+          <p>For any questions about these Terms of Service, please contact us:</p>
+          <div class="contact-info">
+            <p><strong>Email:</strong> legal@growzio.com</p>
+            <p><strong>WhatsApp:</strong> +92 319 5179084</p>
+            <p><strong>Business Hours:</strong> 24/7 Support Available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="refund-policy-modal" class="policy-modal">
+    <div class="policy-modal-header">
+      <div class="policy-header-content">
+        <div class="policy-logo">
+          <span>🔥</span> GROWZIO
+        </div>
+        <button class="policy-close-btn" data-modal="refund-policy-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="policy-modal-content">
+      <div class="policy-body">
+        <h1 class="policy-title">Refund Policy</h1>
+        <p class="policy-last-updated">Last updated: January 2025</p>
+        
+        <div class="important-note">
+          <p><i class="fas fa-info-circle"></i> Please read this policy carefully before making a purchase</p>
+        </div>
+        
+        <div class="policy-card">
+          <h2>1. Digital Products Refund Policy</h2>
+          <p>Due to the nature of digital products, all sales are typically final. However, we understand that sometimes issues may occur, and we have established the following refund guidelines:</p>
+        </div>
+        
+        <div class="policy-card">
+          <h2>2. Eligibility for Refund</h2>
+          <p>Refunds may be considered under the following circumstances:</p>
+          <ul>
+            <li><strong>Service Failure:</strong> If the purchased service does not work as described</li>
+            <li><strong>Non-Delivery:</strong> If you do not receive the service within 24 hours of payment</li>
+            <li><strong>Duplicate Payment:</strong> If you were charged multiple times for the same order</li>
+            <li><strong>Technical Issues:</strong> If there are technical problems from our side preventing service delivery</li>
+          </ul>
+        </div>
+        
+        <div class="policy-card">
+          <h2>3. Non-Refundable Situations</h2>
+          <p>Refunds will not be provided in the following cases:</p>
+          <ul>
+            <li>Change of mind after purchase</li>
+            <li>Failure to meet system requirements for the service</li>
+            <li>Issues with third-party services beyond our control</li>
+            <li>Violation of terms of service</li>
+            <li>Incorrect ordering or user error</li>
+            <li>Expired subscriptions or time-limited services</li>
+          </ul>
+        </div>
+        
+        <div class="policy-card">
+          <h2>4. Refund Timeframe</h2>
+          <p>Refund requests must be submitted within 7 days of purchase. After this period, refund requests will not be considered.</p>
+        </div>
+        
+        <div class="policy-card">
+          <h2>5. How to Request a Refund</h2>
+          <p>To request a refund, please contact our support team with the following information:</p>
+          <ul>
+            <li>Your order details (product name, purchase date)</li>
+            <li>Payment transaction ID</li>
+            <li>Reason for refund request</li>
+            <li>Screenshots or evidence supporting your claim</li>
+          </ul>
+          <div class="contact-info">
+            <p><strong>Contact Support:</strong> WhatsApp +92 319 5179084</p>
+          </div>
+        </div>
+        
+        <div class="policy-card">
+          <h2>6. Refund Processing</h2>
+          <p>Approved refunds will be processed within 5-7 business days. The refund will be issued to the original payment method used for the purchase.</p>
+          <ul>
+            <li><strong>JazzCash/Easypaisa:</strong> Refunds processed within 24-48 hours</li>
+            <li><strong>Binance:</strong> Crypto refunds processed within 3-5 business days</li>
+            <li><strong>Bank Transfer:</strong> May take 5-7 business days</li>
+          </ul>
+        </div>
+        
+        <div class="policy-card">
+          <h2>7. Service-Specific Policies</h2>
+          <div>
+            <h3>Premium App Subscriptions</h3>
+            <p>Refunds are only provided if the service is completely non-functional and our support team cannot resolve the issue.</p>
+          </div>
+          <div>
+            <h3>IPTV Services</h3>
+            <p>Refunds may be considered if the service experiences prolonged downtime (more than 48 hours) that is not due to user-side issues.</p>
+          </div>
+          <div>
+            <h3>Gaming Top-ups</h3>
+            <p>No refunds once the top-up has been processed and delivered to your gaming account.</p>
+          </div>
+          <div>
+            <h3>Digital Bundles & eBooks</h3>
+            <p>No refunds once the download link has been provided or the content has been accessed.</p>
+          </div>
+        </div>
+        
+        <div class="policy-card">
+          <h2>8. Dispute Resolution</h2>
+          <p>Before filing a dispute with your payment provider, please contact our support team to resolve the issue. We're committed to finding a fair solution for all parties involved.</p>
+        </div>
+        
+        <div class="policy-card">
+          <h2>9. Policy Changes</h2>
+          <p>We reserve the right to modify this refund policy at any time. Changes will be effective immediately upon posting to the website.</p>
+        </div>
+        
+        <div class="policy-card">
+          <h2>10. Contact Information</h2>
+          <p>For refund requests or questions about this policy, please contact us:</p>
+          <div class="contact-info">
+            <p><strong>WhatsApp Support:</strong> +92 319 5179084</p>
+            <p><strong>Email:</strong> support@growzio.com</p>
+            <p><strong>Response Time:</strong> Typically within 1-2 hours during business hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script>
+    const apps = [
+      { name: "CapCut Pro", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs2VpcYMsT90SfvKG6V-63wtYnSboBdUapag&s", description: "Professional video editing with premium features and no watermark", detailedDescription: "CapCut Pro offers advanced video editing tools...", features: ["No watermark", "Premium effects", "4K export"], originalPrice: 1500, discountedPrice: 1000 },
+      { name: "Canva Pro", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpqagKqMEAYfajhHl67Xt_NITxxvJmhUjCtg&s", description: "Access to premium templates, photos, and design tools", detailedDescription: "Canva Pro unlocks premium templates...", features: ["100+ million stock images", "Background remover", "Brand Kit"], originalPrice: 600, discountedPrice: 350 },
+      { name: "Netflix Premium", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV8x8Smbp4lIacRS7RpkTo-3ODdoS98kFyUw&s", description: "4K streaming on up to 4 devices simultaneously", detailedDescription: "Netflix Premium offers 4K Ultra HD streaming...", features: ["4K Ultra HD", "4 screens", "Unlimited movies"], originalPrice: 700, discountedPrice: 450 },
+      { name: "Prime Video", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjEAHgv7k8XfGZHznPKMu9-YQ3djUn1-Da1Q&s", description: "Access to Amazon Originals, movies, and TV shows", detailedDescription: "Prime Video gives you access to thousands of movies...", features: ["Amazon Originals", "Offline viewing", "Multiple devices"], originalPrice: 800, discountedPrice: 250 },
+      { name: "Spotify Premium", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9g5vV3j5lMk7pY3jHvQ8X8Q9Q5Q5Q5Q5Q5Q&s", description: "Ad-free music, offline downloads, and high-quality audio", detailedDescription: "Spotify Premium gives you ad-free music...", features: ["Ad-free listening", "Offline downloads", "High quality audio"], originalPrice: 900, discountedPrice: 500 },
+      { name: "YouTube Premium", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&s", description: "Ad-free videos, background play, and YouTube Music", detailedDescription: "YouTube Premium removes ads...", features: ["Ad-free videos", "Background play", "YouTube Music"], originalPrice: 1000, discountedPrice: 600 },
+    ];
+
+    let cart = JSON.parse(localStorage.getItem('growzioCart')) || [];
+    let selectedPaymentMethod = '';
+
+    function renderApps() {
+      const container = document.getElementById('apps-container');
+      container.innerHTML = '';
+      apps.forEach((app, i) => {
+        const usdPrice = (app.discountedPrice / 285).toFixed(2);
+        const appCard = document.createElement('div');
+        appCard.className = 'product-card';
+        appCard.setAttribute('data-aos', 'fade-up');
+        appCard.setAttribute('data-aos-delay', (i % 4) * 100);
+        appCard.innerHTML = `
+          <div class="product-img"><img src="${app.image}" alt="${app.name}" loading="lazy"></div>
+          <div class="product-info">
+            <h3 class="product-title">${app.name}</h3>
+            <p class="product-description">${app.description}</p>
+            <div class="product-price">
+              <span class="original-price">${app.originalPrice} PKR</span>
+              <span class="discounted-price">${app.discountedPrice} PKR</span>
+              <span class="usd-price">(~$${usdPrice} USD)</span>
+            </div>
+            <button class="add-to-cart-btn" data-name="${app.name}" data-price="${app.discountedPrice}">Add to Cart</button>
+          </div>
+        `;
+        container.appendChild(appCard);
+      });
+      document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const name = this.getAttribute('data-name');
+          const price = parseInt(this.getAttribute('data-price'));
+          addToCart(name, price);
+        });
+      });
+    }
+
+    function addToCart(name, price) {
+      const existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      localStorage.setItem('growzioCart', JSON.stringify(cart));
+      updateCartCount();
+      showAddedToCartModal(name);
+    }
+
+    function updateCartCount() {
+      const count = cart.reduce((total, item) => total + item.quantity, 0);
+      document.getElementById('cart-count').textContent = count;
+    }
+
+    function showAddedToCartModal(itemName) {
+        const modal = document.getElementById('added-to-cart-modal');
+        document.getElementById('added-item-name').textContent = `"${itemName}" has been added to your cart.`;
+        modal.showModal();
+    }
+
+    function openCartModal() {
+        const modal = document.getElementById('cart-modal');
+        const itemsContainer = document.getElementById('cart-items');
+        const totalEl = document.getElementById('cart-total');
+        itemsContainer.innerHTML = '';
+        let total = 0;
+
+        if (cart.length === 0) {
+            itemsContainer.innerHTML = '<p class="text-center py-4">Your cart is empty</p>';
+        } else {
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">${item.price} PKR each</div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrease-quantity" data-index="${index}">-</button>
+                            <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-index="${index}">
+                            <button class="quantity-btn increase-quantity" data-index="${index}">+</button>
+                        </div>
+                        <div class="cart-item-total">${itemTotal} PKR</div>
+                        <button class="cart-remove-btn remove-item" data-index="${index}"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                `;
+                itemsContainer.appendChild(cartItem);
+            });
+        }
+        totalEl.textContent = `${total} PKR`;
+        
+        // Reset payment method selection
+        selectedPaymentMethod = '';
+        document.querySelectorAll('.payment-method-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+        
+        modal.showModal();
+        addCartEventListeners();
+    }
+    
+    function addCartEventListeners() {
+        document.querySelectorAll('.decrease-quantity, .increase-quantity, .quantity-input, .remove-item').forEach(el => {
+            el.addEventListener('click', handleCartUpdate);
+            if(el.matches('.quantity-input')) el.addEventListener('change', handleCartUpdate);
+        });
+        
+        // Add payment method selection
+        document.querySelectorAll('.payment-method-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.payment-method-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+                selectedPaymentMethod = this.getAttribute('data-method');
+            });
+        });
+    }
+
+    function handleCartUpdate(e) {
+        const target = e.target.closest('[data-index]');
+        if (!target) return;
+        const index = parseInt(target.dataset.index);
+        const item = cart[index];
+
+        if (target.matches('.decrease-quantity')) {
+            if (item.quantity > 1) item.quantity--;
+        } else if (target.matches('.increase-quantity')) {
+            item.quantity++;
+        } else if (target.matches('.quantity-input')) {
+            const newQuantity = parseInt(target.value);
+            if (newQuantity > 0) item.quantity = newQuantity;
+        } else if (target.matches('.remove-item')) {
+            cart.splice(index, 1);
+        }
+
+        localStorage.setItem('growzioCart', JSON.stringify(cart));
+        openCartModal();
+        updateCartCount();
+    }
+
+    document.getElementById('proceed-to-payment').addEventListener('click', function() {
+        if(cart.length === 0) return alert('Your cart is empty!');
+        if (!selectedPaymentMethod) return alert('Please select a payment method.');
+        
+        document.getElementById('main-content').classList.add('hidden');
+        document.getElementById('payment-page').classList.remove('hidden');
+        
+        const paymentOrderItems = document.getElementById('payment-order-items');
+        const paymentTotal = document.getElementById('payment-total');
+        let itemsHTML = '';
+        let total = 0;
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            itemsHTML += `<div class="flex justify-between mb-2"><span>${item.name} (Qty: ${item.quantity})</span><span>${itemTotal} PKR</span></div>`;
+            total += itemTotal;
+        });
+        paymentOrderItems.innerHTML = itemsHTML;
+        paymentTotal.textContent = `${total} PKR`;
+
+        // Logic to show selected payment method details on payment page
+        document.querySelectorAll('.payment-option').forEach(opt => opt.style.display = 'none');
+        const selectedOption = document.querySelector(`.payment-option[data-method="${selectedPaymentMethod}"]`);
+        if (selectedOption) selectedOption.style.display = 'block';
+
+        document.getElementById('cart-modal').close();
+    });
+
+    function goBackToShopping() {
+        document.getElementById('payment-page').classList.add('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+    }
+
+    function confirmPayment() {
+        if (!selectedPaymentMethod) {
+            alert('Please select a payment method.');
+            return;
+        }
+        
+        let message = '🔥 Order Details - GROWZIO APPS\n\n';
+        cart.forEach(item => {
+            message += `${item.name} (Qty: ${item.quantity}) - ${item.price * item.quantity} PKR\n`;
+        });
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        message += `\nTotal: ${total} PKR\n`;
+        message += `Payment Method: ${selectedPaymentMethod.charAt(0).toUpperCase() + selectedPaymentMethod.slice(1)}\n\n`;
+        message += 'I have made the payment. Please process my order.';
+        
+        window.open(`https://wa.me/923195179084?text=${encodeURIComponent(message)}`, '_blank');
+        
+        cart = [];
+        localStorage.removeItem('growzioCart');
+        updateCartCount();
+        goBackToShopping();
+    }
+
+    // Policy Modal Functions
+    function openPolicyModal(modalId) {
+        document.getElementById(modalId).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePolicyModal(modalId) {
+        document.getElementById(modalId).classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({ duration: 800, once: true });
+      renderApps();
+      updateCartCount();
+      
+      const cartModal = document.getElementById('cart-modal');
+      const addedModal = document.getElementById('added-to-cart-modal');
+
+      document.getElementById('btn-open-cart').addEventListener('click', openCartModal);
+      cartModal.querySelector('.cart-modal-close').addEventListener('click', () => cartModal.close());
+      document.getElementById('continue-shopping').addEventListener('click', () => cartModal.close());
+      document.getElementById('continue-shopping-added').addEventListener('click', () => addedModal.close());
+      document.getElementById('view-cart').addEventListener('click', () => { addedModal.close(); openCartModal(); });
+      
+      document.getElementById('mobile-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+        this.querySelector('i').classList.toggle('fa-bars');
+        this.querySelector('i').classList.toggle('fa-times');
+      });
+
+      // Policy modal event listeners
+      document.getElementById('privacy-policy-link-footer').addEventListener('click', function(e) {
+        e.preventDefault();
+        openPolicyModal('privacy-policy-modal');
+      });
+
+      document.getElementById('terms-link-footer').addEventListener('click', function(e) {
+        e.preventDefault();
+        openPolicyModal('terms-of-service-modal');
+      });
+
+      document.getElementById('refund-policy-link-footer').addEventListener('click', function(e) {
+        e.preventDefault();
+        openPolicyModal('refund-policy-modal');
+      });
+
+      // Close policy modals
+      document.querySelectorAll('.policy-close-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const modalId = this.getAttribute('data-modal');
+          closePolicyModal(modalId);
+        });
+      });
+
+      // Close policy modals when clicking outside
+      document.querySelectorAll('.policy-modal').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closePolicyModal(this.id);
+          }
+        });
+      });
+    });
+</script>
+
+
+</body>
+</html>
