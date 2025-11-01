@@ -123,7 +123,7 @@
     .added-modal-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
     .added-modal-actions .btn { flex: 1; }
     
-    .hero-section { background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(0, 95, 115, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .hero-section { background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(0, 95, 115, 0.9)), url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2024/08/some-3d-social-media-icons.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
     
     /* Payment Method Styles */
     .payment-method-selector { margin-bottom: 1.5rem; }
@@ -280,6 +280,143 @@
       font-size: 1.3rem;
     }
 
+    /* App Categories */
+    .categories-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+    .category-btn {
+      padding: 8px 16px;
+      background: white;
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .category-btn:hover, .category-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* App Detail Modal */
+    #app-detail-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--light-bg);
+      z-index: 2000;
+      overflow-y: auto;
+      display: none;
+    }
+    #app-detail-modal.active {
+      display: block;
+    }
+    .app-detail-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .app-detail-header {
+      background-color: var(--secondary);
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .app-detail-header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .app-detail-close-btn {
+      color: white;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    .app-detail-close-btn:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+    .app-detail-body {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    .app-detail-main {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .app-detail-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .app-detail-image img {
+      max-width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+    .app-detail-info h1 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .app-detail-price {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .app-detail-description {
+      color: #666;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .app-detail-features {
+      margin-bottom: 2rem;
+    }
+    .app-detail-features h3 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .app-detail-features ul {
+      margin-left: 1.5rem;
+    }
+    .app-detail-features li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    .app-detail-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
     @media (max-width: 768px) {
       .section-title { font-size: 2rem; }
       .products-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
@@ -295,6 +432,12 @@
       .policy-section h2 {
         font-size: 1.5rem;
       }
+      .app-detail-main {
+        grid-template-columns: 1fr;
+      }
+      .app-detail-actions {
+        flex-direction: column;
+      }
     }
   </style>
 
@@ -305,11 +448,11 @@
     <!-- Header -->
     <header class="sticky top-0 z-40 bg-secondary backdrop-blur border-b border-primary">
       <div class="container py-3 flex items-center justify-between">
-        <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="font-extrabold text-xl text-white flex items-center">
+        <a href="#" class="font-extrabold text-xl text-white flex items-center">
           <span class="text-primary mr-1">🔥</span> GROWZIO
         </a>
         <nav class="hidden md:flex gap-6 text-sm font-medium">
-          <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="nav-link hover:text-primary">Home</a>
+          <a href="#" class="nav-link hover:text-primary" id="home-link">Home</a>
           <a href="#apps" class="nav-link text-primary">Apps</a>
           <a href="#contact" class="nav-link hover:text-primary">Contact</a>
         </nav>
@@ -325,7 +468,7 @@
       </div>
       <div id="mobile-menu" class="bg-secondary-dark border-t border-primary md:hidden hidden">
         <div class="px-4 py-3 flex flex-col gap-2">
-          <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="py-2 nav-link">Home</a>
+          <a href="#" class="py-2 nav-link" id="mobile-home-link">Home</a>
           <a href="#apps" class="py-2 nav-link text-primary">Apps</a>
           <a href="#contact" class="py-2 nav-link">Contact</a>
         </div>
@@ -352,6 +495,18 @@
           <h2 class="section-title">All Premium Apps</h2>
           <p class="section-subtitle">Choose from our wide selection of premium app subscriptions</p>
         </div>
+        
+        <!-- Categories Filter -->
+        <div class="categories-container" data-aos="fade-up" data-aos-delay="200">
+          <button class="category-btn active" data-category="all">All Apps</button>
+          <button class="category-btn" data-category="ai-tools">AI Tools</button>
+          <button class="category-btn" data-category="productivity">Productivity</button>
+          <button class="category-btn" data-category="entertainment">Entertainment</button>
+          <button class="category-btn" data-category="vpn-security">VPN & Security</button>
+          <button class="category-btn" data-category="design">Design</button>
+          <button class="category-btn" data-category="education">Education</button>
+        </div>
+        
         <div class="products-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="apps-container">
           <!-- Apps will be dynamically loaded here -->
         </div>
@@ -388,7 +543,7 @@
     <!-- Back to Home Button Section -->
     <section class="section bg-lightbg text-center pt-0">
         <div class="container">
-            <a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="btn">
+            <a href="#" class="btn" id="back-to-home-btn">
                 <i class="fa-solid fa-arrow-left mr-2"></i> Back To Home
             </a>
         </div>
@@ -401,16 +556,11 @@
           <div>
             <h3 class="text-white text-lg font-bold mb-4">GROWZIO</h3>
             <p class="mb-4">Your trusted source for premium digital services in Pakistan at affordable prices.</p>
-            <div class="flex gap-4">
-              <a href="https://wa.me/923195179084" target="_blank" class="text-gray-300 hover:text-primary"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="https://www.tiktok.com/@its_hannni" target="_blank" class="text-gray-300 hover:text-primary"><i class="fa-brands fa-tiktok"></i></a>
-              <a href="#" class="text-gray-300 hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
-            </div>
           </div>
           <div>
             <h3 class="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
             <ul class="space-y-2">
-              <li><a href="https://growzio-jpg.github.io/GrowzioStore/index.html" class="text-gray-300 hover:text-primary">Home</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-primary" id="footer-home-link">Home</a></li>
               <li><a href="#apps" class="text-gray-300 hover:text-primary">Apps</a></li>
               <li><a href="#contact" class="text-gray-300 hover:text-primary">Contact</a></li>
             </ul>
@@ -571,6 +721,52 @@
         <p>© 2025 GROWZIO APPS. All rights reserved.</p>
       </div>
     </footer>
+  </div>
+
+  <!-- App Detail Modal -->
+  <div id="app-detail-modal" class="policy-modal">
+    <div class="app-detail-header">
+      <div class="app-detail-header-content">
+        <div class="policy-logo">
+          <span>🔥</span> GROWZIO
+        </div>
+        <button class="app-detail-close-btn">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="app-detail-content">
+      <div class="app-detail-body">
+        <div class="app-detail-main">
+          <div class="app-detail-image">
+            <img id="detail-app-image" src="" alt="App Image">
+          </div>
+          <div class="app-detail-info">
+            <h1 id="detail-app-name">App Name</h1>
+            <div class="app-detail-price">
+              <span class="original-price" id="detail-original-price">0 PKR</span>
+              <span class="discounted-price" id="detail-discounted-price">0 PKR</span>
+              <span class="usd-price" id="detail-usd-price">(~$0 USD)</span>
+            </div>
+            <p class="app-detail-description" id="detail-app-description">App description goes here.</p>
+            <div class="app-detail-features">
+              <h3>Features</h3>
+              <ul id="detail-app-features">
+                <!-- Features will be populated here -->
+              </ul>
+            </div>
+            <div class="app-detail-actions">
+              <button class="btn" id="detail-add-to-cart">Add to Cart</button>
+              <button class="btn btn-outline" id="detail-close">Close</button>
+            </div>
+          </div>
+        </div>
+        <div class="policy-section">
+          <h2>Detailed Description</h2>
+          <p id="detail-detailed-description">Detailed description of the app goes here.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Policy Modals -->
@@ -871,21 +1067,222 @@
   
 <script>
     const apps = [
-      { name: "CapCut Pro", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs2VpcYMsT90SfvKG6V-63wtYnSboBdUapag&s", description: "Professional video editing with premium features and no watermark", detailedDescription: "CapCut Pro offers advanced video editing tools...", features: ["No watermark", "Premium effects", "4K export"], originalPrice: 1500, discountedPrice: 1000 },
-      { name: "Canva Pro", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpqagKqMEAYfajhHl67Xt_NITxxvJmhUjCtg&s", description: "Access to premium templates, photos, and design tools", detailedDescription: "Canva Pro unlocks premium templates...", features: ["100+ million stock images", "Background remover", "Brand Kit"], originalPrice: 600, discountedPrice: 350 },
-      { name: "Netflix Premium", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV8x8Smbp4lIacRS7RpkTo-3ODdoS98kFyUw&s", description: "4K streaming on up to 4 devices simultaneously", detailedDescription: "Netflix Premium offers 4K Ultra HD streaming...", features: ["4K Ultra HD", "4 screens", "Unlimited movies"], originalPrice: 700, discountedPrice: 450 },
-      { name: "Prime Video", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjEAHgv7k8XfGZHznPKMu9-YQ3djUn1-Da1Q&s", description: "Access to Amazon Originals, movies, and TV shows", detailedDescription: "Prime Video gives you access to thousands of movies...", features: ["Amazon Originals", "Offline viewing", "Multiple devices"], originalPrice: 800, discountedPrice: 250 },
-      { name: "Spotify Premium", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9g5vV3j5lMk7pY3jHvQ8X8Q9Q5Q5Q5Q5Q5Q&s", description: "Ad-free music, offline downloads, and high-quality audio", detailedDescription: "Spotify Premium gives you ad-free music...", features: ["Ad-free listening", "Offline downloads", "High quality audio"], originalPrice: 900, discountedPrice: 500 },
-      { name: "YouTube Premium", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&s", description: "Ad-free videos, background play, and YouTube Music", detailedDescription: "YouTube Premium removes ads...", features: ["Ad-free videos", "Background play", "YouTube Music"], originalPrice: 1000, discountedPrice: 600 },
+      { 
+        name: "Chat Gpt Plus Private", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSrpinT9GlM0x9k7PaEWicghDaFrrjUqGsau1t92KkxqBCif0clx3vAyv045ouJC1X7fF_Z-gRI32CgGXahA5OXif8SvPdgGE_v63he3s440J6V7IcSZaYj351Bdw8OxU4ZCfVrY7u0cAUzdr91T8RsEfmdU9XsOvPrkFj7vVmxgbNABUgisFxkp2L0v8/s1600/chat%20gpt%20plus.jpeg", 
+        description: "Advanced AI language model with premium features", 
+        detailedDescription: "ChatGPT Plus offers enhanced capabilities including priority access, faster response times, and access to new features. Perfect for professionals, students, and anyone needing advanced AI assistance.", 
+        features: ["Priority access to new features", "Faster response times", "Access during peak times", "Advanced AI capabilities"], 
+        originalPrice: 2400, 
+        discountedPrice: 1400,
+        category: "ai-tools"
+      },
+      { 
+        name: "Semrush Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCfWWCTAbTqTXAHsNgekwTKx6If390l7JIxtdjWMpoMFM9okH6QBrphBlq703ctC5ReJ2gkoVre3Fa7ZVUC57vxeVHmQxrIiHrT8hRWKZ3hDr0E4VqB7SwVa_kL_9L2y3iaG5AJGn8xB9WL1IKo8RnkgEnZU_8hzVnQWQxmzGgTNYOXbLtC3_A2KJNWJ4/s300/sermrus.png", 
+        description: "Complete SEO and digital marketing toolkit", 
+        detailedDescription: "Semrush provides comprehensive SEO tools, competitor analysis, keyword research, and marketing insights to help grow your online presence and outperform competitors.", 
+        features: ["Keyword research", "Competitor analysis", "Site audit", "Backlink analysis", "Rank tracking"], 
+        originalPrice: 999, 
+        discountedPrice: 599,
+        category: "productivity"
+      },
+      { 
+        name: "Google Veo3", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPlMKxdD432YKq14UlJRqoi-Scdk0Gznudc_rgdwPu9TjPy5ynIi9w-MX9eUjkVYPHnFLrFAa4K3hhOqfsT6B5Vol25IFyJj1v_ywGarU-YDQZvE_zuumDfHlH1TL_dBgrQ3ufYuuFxcpjYjkQI5HX_rBhebPMa9vcIql8R2S3XOR9OYKgDxWKoqsv7TY/s300/google%20veo%203.jpeg", 
+        description: "Advanced video generation AI model", 
+        detailedDescription: "Google Veo3 is a cutting-edge AI model that generates high-quality videos from text prompts, offering creative professionals powerful video creation capabilities.", 
+        features: ["Text-to-video generation", "High-quality output", "Customizable styles", "Fast processing"], 
+        originalPrice: 3000, 
+        discountedPrice: 1599,
+        category: "ai-tools"
+      },
+      { 
+        name: "Udemy Business", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKwLLt1KXCazV5Rd2Mbu2IKrey1oxHJkFZ7SVcdvrA3e7MpC5L09h6Zh8xln1AQpIC3kUVTpgdk3XdzGjPXLeOs8tSyJveF-LguPNmi2ogtt9Sc5OeKMDBA7V9AaSf1tjwOkub-O5Wta10EAGw45uOzkWn2NJwCDDuTwkOR_a8rzPu0NHsZwbTvpQg6ag/s259/udemy.png", 
+        description: "Unlimited access to thousands of courses", 
+        detailedDescription: "Udemy Premium provides unlimited access to thousands of courses across all categories, from programming and business to personal development and creative skills.", 
+        features: ["Unlimited course access", "Offline viewing", "Certificates of completion", "Expert instructors"], 
+        originalPrice: 2000, 
+        discountedPrice: 1100,
+        category: "education"
+      },
+      { 
+        name: "Grammerly Pro Private", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTxfblY-_Ns7zm4bzz3wvAG9NwJKZ4aK_PZiQwUj84xplYc7VBychfeo7bDCpHT5BMHdepD2-Kfjdn5eA4y5EXFefKC_H1Y_Iq48awzE1pjsXkw72S8EkdRj12C6qGs1SrRzmZ6BMbi3CnE4SkfdiaR57hfpBSsY3ShIBYkLVtrSRm8FjCoDwGHqbvit8/s318/grammerly.png", 
+        description: "Advanced writing assistance and grammar checking", 
+        detailedDescription: "Grammarly Premium offers advanced grammar checking, plagiarism detection, vocabulary enhancement, and style suggestions to improve your writing across all platforms.", 
+        features: ["Advanced grammar checking", "Plagiarism detection", "Vocabulary enhancement", "Style suggestions", "Tone adjustments"], 
+        originalPrice: 2400, 
+        discountedPrice: 1400,
+        category: "productivity"
+      },
+      { 
+        name: "Replit", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheFMkvW5Y5-g38CusDOAnFvv_yQI1iijbPG1or6IxHhe30Gj621WLjvxoCiZEQavRYDwkQBgort2sewbK7TZQ79buLl0xl0a5YffpzN793Um8LCT-UzDj-KzUvWzI6lAxucHkhehyphenhyphenyLpi9P2fpN0ygMQeb5KAO_M6aoXWXbCfqrsjbKWT7m0-LTe98160/s864/replit.PNG", 
+        description: "Collaborative browser-based IDE", 
+        detailedDescription: "Replit is a powerful, collaborative, browser-based IDE that supports multiple programming languages and enables real-time coding collaboration with team members.", 
+        features: ["Browser-based IDE", "Real-time collaboration", "Multiple language support", "Deployment tools", "Team management"], 
+        originalPrice: 3000, 
+        discountedPrice: 2100,
+        category: "productivity"
+      },
+      { 
+        name: "LinkdIn Premium Career", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOhO2bAUEAfbr88nOXOXVu547ygZbsLaJzeqwYrJkkdegMGQht42cIXdmQxITfBxCX5booaFZ5zAYERnc6yHritR109GjGz52Yoi7RGKfqv0C0dGiVKpdjhKJkkfx60s506W2Sos7W91mQT9eMzEvnNw338hs_gsWfE46hRfSw6XCa26juKJdjWoS6MJM/s245/linkden%20premium.jpeg", 
+        description: "Enhanced professional networking and insights", 
+        detailedDescription: "LinkedIn Premium provides advanced networking tools, detailed insights on job applicants, enhanced search capabilities, and InMail messages to connect with professionals.", 
+        features: ["Enhanced search filters", "InMail messages", "Who's viewed your profile", "Advanced insights", "Learning courses"], 
+        originalPrice: 6000, 
+        discountedPrice: 3700,
+        category: "productivity"
+      },
+      { 
+        name: "Story Blocks", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRPSk7nA3dVemldOBcAow0rVdUeQZOmUqfI33ZsRvwsJo_RBctcs28rYaI0lCB6oDD3QAniRPXzVGzepMGr_wMxtB2YPtuIArFr6qCRE23p8IIuLfEIMv4cRiqEr27l2rt3DwEIhVRHganj5a6ifdP6bBhU0Izyr-81uAuYAxuzIq7K9X-h9YPCo0zc0A/s224/story%20blocks.png", 
+        description: "Unlimited stock media library", 
+        detailedDescription: "Storyblocks offers unlimited downloads of stock video, audio, and images for your creative projects, with new content added regularly.", 
+        features: ["Unlimited downloads", "Stock video, audio & images", "Regular new content", "Royalty-free", "4K quality"], 
+        originalPrice: 1200, 
+        discountedPrice: 900,
+        category: "design"
+      },
+      { 
+        name: "Zoom Pro Private", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR4bxo4ZQot4rNIpu4mYGIzrf9JY3S_2vorvTDRj_0R-kKKTkuxOCrz87N39mBhIjp9OG4ZhLMBwaIihb7yVF6AUFzt_Y8dE1SWmbBe3XcJvtzMeU6_XAgTx29ZLAQ4rFOKxO-_1jNVLlAM-Wuijv0Mz8l5mEJrE21xTIDx_UOZ0MshfUsk63Tf7wxuK0/s225/Zoompreimuim.jpeg", 
+        description: "Enhanced video conferencing for professionals", 
+        detailedDescription: "Zoom Pro removes time limits on meetings, provides administrative controls, and offers enhanced features for professional video conferencing and collaboration.", 
+        features: ["No time limits", "Admin controls", "Cloud recording", "Custom personal meeting ID", "Reporting"], 
+        originalPrice: 3500, 
+        discountedPrice: 2700,
+        category: "productivity"
+      },
+      { 
+        name: "Nord Vpn", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbOe4CYRiIRZdVc9U9IssIq3iA7Qv76zUVMUzhjTpg_y-LFg-Fy_DRg0Wfx1B2gjBDIVnXXzjLWk9VhO_B5FPODTxMZuBV-4qHuPPYHvSuxDdAQokTKnIx-HZRcrrevvQz33Yz3sPumnwMFX5CbwjrDw4qavm7KEjxWl0H-LIFfjN8mD_R6Ofvk0A206g/s386/nordvpn.jpeg", 
+        description: "Premium VPN service for security and privacy", 
+        detailedDescription: "NordVPN provides military-grade encryption, access to global content, malware protection, and secure browsing to protect your online privacy and security.", 
+        features: ["Military-grade encryption", "Global server network", "Malware protection", "No-logs policy", "Kill switch"], 
+        originalPrice: 1200, 
+        discountedPrice: 800,
+        category: "vpn-security"
+      },
+      { 
+        name: "Netflix 4k Subscription", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm3mJomTohCFNv63flqI-1PslRn9iLlOPQ6p-QlpbNfiYz9QrCvy3SQj6p7LXLT1t36y_8x05NF1AnJtgG21tyWIr5nDjfVY3XipSfQAMz_MeZHAxeuJLlsoa61zQF1UgGNxnEQpZz-w7hOBXwunPy7tRzpPdSyo8unyszRNL89b2KooF0-dwNKWMGUf4/s275/netflix.jpeg", 
+        description: "4K streaming on up to 4 devices simultaneously", 
+        detailedDescription: "Netflix Premium offers 4K Ultra HD streaming on up to 4 devices at once, with access to the entire Netflix library of movies, TV shows, and Netflix Originals.", 
+        features: ["4K Ultra HD", "4 screens simultaneously", "Unlimited movies & TV shows", "Download for offline viewing", "Netflix Originals"], 
+        originalPrice: 900, 
+        discountedPrice: 450,
+        category: "entertainment"
+      },
+      { 
+        name: "Canva  Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-W6OuRvuqwG0l0On6JA0Oqc3JCDz7lQyT6XrQJGbXa-i0v8w_ajYYj_p_rF4BLt_hUvPGDvsrCUOxjYrI27NxXQdVLC1DpySiDcCie0gVZTVGStk4UEzGhMfFUrvsZ199DD3Rx5Q3aDdZGBcQOjd1ADbPYv7LNBWKuieMlY153boupiuvrhXsYq1babc/s386/canvapro.jpeg", 
+        description: "Access to premium templates, photos, and design tools", 
+        detailedDescription: "Canva Pro unlocks premium templates, millions of stock photos, advanced design tools, brand kits, and collaboration features for professional design work.", 
+        features: ["Premium templates", "100+ million stock images", "Background remover", "Brand Kit", "Magic Resize"], 
+        originalPrice: 500, 
+        discountedPrice: 350,
+        category: "design"
+      },
+      { 
+        name: "Capcut  Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBjbl08ZEP0V_6VI9wqE0pX13Icu4qqVPe_XzYVykLY9s1WNQzrY4EJmiHi1sCtlVvgIs7Ua-0sCyTkvECmwhOyV-S47vPlMVyvUYEqNdwGDSKz0MXFgM0uxZrDqo_9NoxnLqcQA1g2RD-Ow7y0Vn1t7mP8WBXbcMYHhsrx9nQeTbWarOwEouLsiybb4g/s331/capcut%20pro.jpeg", 
+        description: "Professional video editing with premium features and no watermark", 
+        detailedDescription: "CapCut Pro offers advanced video editing tools, premium effects, 4K export, no watermark, and access to an extensive library of music and effects.", 
+        features: ["No watermark", "Premium effects", "4K export", "Advanced editing tools", "Extensive music library"], 
+        originalPrice: 2550, 
+        discountedPrice: 1000,
+        category: "design"
+      },
+      { 
+        name: "Surf Shark  Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZsfaQDOU8TJjSZ1NDOoHzBiGJA_I0BIrXth6lcon-JVFRJXcUauMkZ2BJvJ9FK0mYuIOceJHP_pfve61zKKQ4NwedP6MYrS2v8jiB6Jp84WvclHf_6V1O61qcMf4llx7DACPMaDRW9untWPTp4epZHtpx17Cdk61vkwsXKwCDWBO5aNf8R_Bx7I2jtxY/s331/surf%20shark%20vpm.jpeg", 
+        description: "Advanced VPN with unlimited device connections", 
+        detailedDescription: "Surfshark Premium offers unlimited device connections, CleanWeb ad-blocking, Whitelister, and MultiHop features for comprehensive online security and privacy.", 
+        features: ["Unlimited devices", "CleanWeb ad-blocking", "Whitelister", "MultiHop", "NoBorders mode"], 
+        originalPrice: 1000, 
+        discountedPrice: 700,
+        category: "vpn-security"
+      },
+      { 
+        name: "Ahrefs Bar Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCNlxQNk7qwgiur9MGD11MX591FMR8HHhMQHzHwi77niebMhZxP-LTNWWAV2hBqrqYcCbEJ4-5TakmI12JVS4Hw5dISq4Y2bnJNERyEsudF8yZfdESpYp5XO9ZvSNynFlDAPoV9Qo2iQ6HvABGnpOlvIKNauRZcmshRuqQAbTZCmCYer1tzJitghQwdtg/s720/Ahrefs-Tools-Bar.png", 
+        description: "Comprehensive SEO and competitor analysis tool", 
+        detailedDescription: "Ahrefs provides powerful SEO tools including site audit, backlink analysis, keyword research, competitor analysis, and rank tracking to improve search visibility.", 
+        features: ["Site audit", "Backlink analysis", "Keyword research", "Competitor analysis", "Rank tracking"], 
+        originalPrice: 6000, 
+        discountedPrice: 4700,
+        category: "productivity"
+      },
+      { 
+        name: "Microsoft 365", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiB0FaFcVaoJgtBA2igY2n6YzCd-0DaaMbY261tRNvWzB0gOkZWU8LQl49kcow5GXzMn0cEEaQDDuKQ0er7TY4MX9B0kyqi8MhYplC0HMFEQkG6Cp3uVxG6yL3pZMrpOOwMqrvzb93K5SbTUDVaUHOF3xgR69fhC6WokeRj4iTtxwX0r3z4Xt28BI80rCM/s861/microsoft365.PNG", 
+        description: "Complete office suite with cloud storage", 
+        detailedDescription: "Microsoft 365 includes Word, Excel, PowerPoint, Outlook, and more, with 1TB cloud storage, premium features, and regular updates for home or business use.", 
+        features: ["Word, Excel, PowerPoint", "1TB cloud storage", "Outlook email", "Teams collaboration", "Regular updates"], 
+        originalPrice: 3500, 
+        discountedPrice: 2300,
+        category: "productivity"
+      },
+      { 
+        name: "Ideogram Plus Private", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiY3HNWunfiag6zLp8JfNfgfFZBBrZqIVPX3uw044kSbH4_tygk4Vhskg9zqBvyaS2OgX5H4H-c_kklAjBMJcjFE6TZey2ANiJ6j5NUJqFOKzRPXjchJOjoQgfszSy5Joxkw0ptkiBqJB2BSJ2XBKUxkV_YKcBZ3WIib3_DDdxyTDbBGKLpRGGdQwNl__w/s392/ideogram.jpeg", 
+        description: "AI-powered image generation with text rendering", 
+        detailedDescription: "Ideogram specializes in generating images with accurate text rendering, offering creative professionals a powerful tool for visual content creation with integrated text elements.", 
+        features: ["Text rendering in images", "Multiple art styles", "High-resolution output", "Customizable prompts", "Fast generation"], 
+        originalPrice: 4000, 
+        discountedPrice: 2700,
+        category: "ai-tools"
+      },
+      { 
+        name: "Prime Video Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiL-vP-Q_f8omJfwSU4iE2sw4eE98tYVYfHKnu9KHol78aZ3ATbljRSumITEKakd7GHZw2CciiqlnywnU1G3Eqfj0JRvOK-Gkpps42eOfVITtGgwJwWugDymD9Eu8q5e_FOV1cOyWkKc8Ef073zPzWLBVLD6I6PAb8saavuprVGEMCU_Pk6jXfANT14vI/s392/primevideo.jpeg", 
+        description: "Access to Amazon Originals, movies, and TV shows", 
+        detailedDescription: "Prime Video gives you access to thousands of movies, TV shows, and Amazon Originals, with the ability to download for offline viewing and watch on multiple devices.", 
+        features: ["Amazon Originals", "Offline viewing", "Multiple devices", "4K Ultra HD", "X-Ray feature"], 
+        originalPrice: 900, 
+        discountedPrice: 250,
+        category: "entertainment"
+      },
+      { 
+        name: "Gemini Pro 1year", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqSNfx0xkX4thuZ4C1361e1tek_xIIv8MFNle1YRy3uv79e0X7MoOONZZLEYl5TVY1D9bMpB2oygg61XED91b7FWu0lOAP2z7P-TBBOVLTYPS4XMYjDFUSKjK7X3gBEYKpjpm9nla0CwMT5b7LfVpNSZhBvi7MsqwY9rQ1cdZTCHDjKUSrwxwf6IT6AAg/s1200/image-266.png", 
+        description: "Google's advanced AI assistant with enhanced capabilities", 
+        detailedDescription: "Gemini Premium offers advanced AI capabilities, integration with Google services, extended context windows, and priority access to new features for enhanced productivity.", 
+        features: ["Advanced AI capabilities", "Google services integration", "Extended context", "Priority access", "Code generation"], 
+        originalPrice: 4400, 
+        discountedPrice: 2400,
+        category: "ai-tools"
+      },
+      { 
+        name: "Caption Ai Premium", 
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOBicrHhSIUU8WByUd59gEr92srrS72zaJ3-GqiUGyxNAQTl0e67eI7fPoYvDFQKlah10xwem4-25MRSTnjfuA4VIPAnJQb27LGq80v4p1gcbX2b0W1s_ozov9JqCw99j91bOEkuecYO0XKr0AvAQ8OHU7ItDTIXn2SDPEAU2sHWDc4-U7Ufj60vY0EFw/s383/captionai.jpeg", 
+        description: "AI-powered caption generation for videos", 
+        detailedDescription: "Caption AI automatically generates accurate captions for videos, supports multiple languages, offers customization options, and saves time on video content creation.", 
+        features: ["Automatic caption generation", "Multiple language support", "Customization options", "Time-saving", "Accuracy improvements"], 
+        originalPrice: 4000, 
+        discountedPrice: 2700,
+        category: "ai-tools"
+      },
     ];
 
     let cart = JSON.parse(localStorage.getItem('growzioCart')) || [];
     let selectedPaymentMethod = '';
+    let currentCategory = 'all';
 
     function renderApps() {
       const container = document.getElementById('apps-container');
       container.innerHTML = '';
-      apps.forEach((app, i) => {
+      
+      // Filter apps by category
+      const filteredApps = currentCategory === 'all' 
+        ? apps 
+        : apps.filter(app => app.category === currentCategory);
+      
+      filteredApps.forEach((app, i) => {
         const usdPrice = (app.discountedPrice / 285).toFixed(2);
         const appCard = document.createElement('div');
         appCard.className = 'product-card';
@@ -902,10 +1299,13 @@
               <span class="usd-price">(~$${usdPrice} USD)</span>
             </div>
             <button class="add-to-cart-btn" data-name="${app.name}" data-price="${app.discountedPrice}">Add to Cart</button>
+            <button class="view-details-btn" data-app='${JSON.stringify(app).replace(/'/g, "&#39;")}'>View Details</button>
           </div>
         `;
         container.appendChild(appCard);
       });
+      
+      // Add event listeners for Add to Cart buttons
       document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         button.addEventListener('click', function() {
           const name = this.getAttribute('data-name');
@@ -913,6 +1313,53 @@
           addToCart(name, price);
         });
       });
+      
+      // Add event listeners for View Details buttons
+      document.querySelectorAll('.view-details-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const appData = JSON.parse(this.getAttribute('data-app'));
+          openAppDetailModal(appData);
+        });
+      });
+    }
+
+    function openAppDetailModal(app) {
+      const modal = document.getElementById('app-detail-modal');
+      const usdPrice = (app.discountedPrice / 285).toFixed(2);
+      
+      // Populate modal with app data
+      document.getElementById('detail-app-image').src = app.image;
+      document.getElementById('detail-app-name').textContent = app.name;
+      document.getElementById('detail-original-price').textContent = `${app.originalPrice} PKR`;
+      document.getElementById('detail-discounted-price').textContent = `${app.discountedPrice} PKR`;
+      document.getElementById('detail-usd-price').textContent = `(~$${usdPrice} USD)`;
+      document.getElementById('detail-app-description').textContent = app.description;
+      document.getElementById('detail-detailed-description').textContent = app.detailedDescription;
+      
+      // Populate features list
+      const featuresList = document.getElementById('detail-app-features');
+      featuresList.innerHTML = '';
+      app.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        featuresList.appendChild(li);
+      });
+      
+      // Set up Add to Cart button in modal
+      document.getElementById('detail-add-to-cart').onclick = function() {
+        addToCart(app.name, app.discountedPrice);
+        closeAppDetailModal();
+      };
+      
+      // Show the modal
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeAppDetailModal() {
+      const modal = document.getElementById('app-detail-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
     }
 
     function addToCart(name, price) {
@@ -1089,10 +1536,36 @@
         document.body.style.overflow = 'auto';
     }
 
+    // Category Filtering
+    function setupCategoryFiltering() {
+      document.querySelectorAll('.category-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          // Update active button
+          document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          this.classList.add('active');
+          
+          // Update current category and re-render apps
+          currentCategory = this.getAttribute('data-category');
+          renderApps();
+        });
+      });
+    }
+
+    // Function to scroll to top of page
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       AOS.init({ duration: 800, once: true });
       renderApps();
       updateCartCount();
+      setupCategoryFiltering();
       
       const cartModal = document.getElementById('cart-modal');
       const addedModal = document.getElementById('added-to-cart-modal');
@@ -1108,6 +1581,10 @@
         this.querySelector('i').classList.toggle('fa-bars');
         this.querySelector('i').classList.toggle('fa-times');
       });
+
+      // App detail modal event listeners
+      document.querySelector('.app-detail-close-btn').addEventListener('click', closeAppDetailModal);
+      document.getElementById('detail-close').addEventListener('click', closeAppDetailModal);
 
       // Policy modal event listeners
       document.getElementById('privacy-policy-link-footer').addEventListener('click', function(e) {
@@ -1140,6 +1617,28 @@
             closePolicyModal(this.id);
           }
         });
+      });
+
+      // Home button functionality - scroll to top
+      document.getElementById('home-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToTop();
+      });
+
+      document.getElementById('mobile-home-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToTop();
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+
+      document.getElementById('footer-home-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToTop();
+      });
+
+      document.getElementById('back-to-home-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToTop();
       });
     });
 </script>
