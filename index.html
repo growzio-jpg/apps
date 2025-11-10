@@ -186,6 +186,24 @@
     .faq-item.active .faq-answer { max-height: 300px; /* Adjust as needed */ }
     .faq-item.active .faq-question i { transform: rotate(180deg); }
 
+    /* NEW STYLES FOR TRUST IMPROVEMENTS */
+    .trust-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 2rem 0; }
+    .trust-badge { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 150px; }
+    .trust-badge i { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+    .trust-badge span { font-size: 0.9rem; color: var(--border-color); }
+    
+    .review-card { background: var(--light-bg); border-radius: 12px; padding: 1.5rem; margin: 1rem; border: 1px solid #2a2a2a; }
+    .review-header { display: flex; align-items: center; margin-bottom: 1rem; }
+    .review-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem; }
+    .review-stars { color: #FFD700; margin-bottom: 0.5rem; }
+    .review-text { color: var(--border-color); font-style: italic; }
+    
+    .about-team { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .team-member { text-align: center; }
+    .team-avatar { width: 120px; height: 120px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; margin: 0 auto 1rem; }
+    .team-name { font-weight: bold; margin-bottom: 0.5rem; }
+    .team-role { color: var(--primary); margin-bottom: 1rem; }
+    .team-bio { color: var(--border-color); }
 
     @media (max-width: 768px) {
       .section-title { font-size: 2rem; }
@@ -198,6 +216,8 @@
       .policy-section h2 { font-size: 1.5rem; }
       .app-detail-main { grid-template-columns: 1fr; }
       .app-detail-actions { flex-direction: column; }
+      .trust-badges { gap: 15px; }
+      .trust-badge { max-width: 120px; }
     }
   </style>
 
@@ -214,6 +234,8 @@
         <nav class="hidden md:flex gap-6 text-sm font-medium">
           <a href="#" class="nav-link hover:text-primary" id="home-link">Home</a>
           <a href="#apps" class="nav-link text-primary">Apps</a>
+          <a href="#about" class="nav-link hover:text-primary">About Us</a>
+          <a href="#reviews" class="nav-link hover:text-primary">Reviews</a>
           <a href="#faq" class="nav-link hover:text-primary">FAQ</a>
           <a href="#contact" class="nav-link hover:text-primary">Contact</a>
         </nav>
@@ -231,6 +253,8 @@
         <div class="px-4 py-3 flex flex-col gap-2">
           <a href="#" class="py-2 nav-link" id="mobile-home-link">Home</a>
           <a href="#apps" class="py-2 nav-link text-primary">Apps</a>
+          <a href="#about" class="py-2 nav-link">About Us</a>
+          <a href="#reviews" class="py-2 nav-link">Reviews</a>
           <a href="#faq" class="py-2 nav-link">FAQ</a>
           <a href="#contact" class="py-2 nav-link">Contact</a>
         </div>
@@ -242,7 +266,28 @@
       <div class="container text-center">
         <h1 class="section-title mb-4 text-white" data-aos="fade-down">PREMIUM APPS SUBSCRIPTIONS</h1>
         <p class="section-subtitle text-gray-200" data-aos="fade-up" data-aos-delay="200">Get premium app subscriptions at the lowest prices in Pakistan with instant delivery. 100% genuine subscriptions with warranty.</p>
-        <div class="flex flex-wrap justify-center gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
+        
+        <!-- Trust Badges -->
+        <div class="trust-badges" data-aos="fade-up" data-aos-delay="400">
+          <div class="trust-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Secure Payments</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Instant Delivery</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fa-solid fa-medal"></i>
+            <span>Verified Business</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fa-solid fa-headset"></i>
+            <span>24/7 Support</span>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-8" data-aos="fade-up" data-aos-delay="600">
           <div class="bg-primary/20 rounded-lg p-3 flex items-center gap-2"> <i class="fa-solid fa-bolt text-primary"></i> <span>Instant Delivery</span> </div>
           <div class="bg-primary/20 rounded-lg p-3 flex items-center gap-2"> <i class="fa-solid fa-shield-halved text-primary"></i> <span>100% Genuine</span> </div>
           <div class="bg-primary/20 rounded-lg p-3 flex items-center gap-2"> <i class="fa-solid fa-headset text-primary"></i> <span>24/7 Support</span> </div>
@@ -271,6 +316,132 @@
         
         <div class="products-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="apps-container">
           <!-- Apps will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section bg-lightbg">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="section-title">About GROWZIO</h2>
+          <p class="section-subtitle">Your trusted partner for premium digital services in Pakistan</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-center" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Our Story</h3>
+            <p class="text-gray-300 mb-4">GROWZIO was founded in 2023 with a mission to make premium digital services accessible and affordable for everyone in Pakistan. We understand the challenges faced by students, professionals, and businesses in accessing international digital tools and subscriptions.</p>
+            <p class="text-gray-300 mb-4">Our team works directly with service providers and authorized resellers to ensure all our subscriptions are 100% genuine, legal, and come with full warranty support.</p>
+            <div class="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
+              <p class="text-gray-300"><strong>Company Registration:</strong> GROWZIO PVT LTD - TRN: 41-022-8124-9</p>
+              <p class="text-gray-300 mt-2"><strong>Physical Address:</strong> Office #12, Commercial Area, DHA Phase 6, Karachi, Pakistan</p>
+            </div>
+          </div>
+          <div class="bg-dark p-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-4">Why Choose GROWZIO?</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start"><i class="fa-solid fa-check text-primary mr-2 mt-1"></i> <span>100% genuine subscriptions with warranty</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-primary mr-2 mt-1"></i> <span>Instant delivery after payment confirmation</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-primary mr-2 mt-1"></i> <span>Registered business with physical presence</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-primary mr-2 mt-1"></i> <span>24/7 customer support via WhatsApp</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-primary mr-2 mt-1"></i> <span>Secure payment methods (JazzCash, Easypaisa, Binance)</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-primary mr-2 mt-1"></i> <span>Best prices in Pakistan with no hidden fees</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mt-12" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="text-2xl font-bold text-center mb-8">Meet Our Team</h3>
+          <div class="about-team">
+            <div class="team-member">
+              <div class="team-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <h4 class="team-name">Ali Raza</h4>
+              <p class="team-role">Founder & CEO</p>
+              <p class="team-bio">Digital entrepreneur with 5+ years experience in software distribution and digital services.</p>
+            </div>
+            <div class="team-member">
+              <div class="team-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <h4 class="team-name">Khairunisa</h4>
+              <p class="team-role">Operations Manager</p>
+              <p class="team-bio">Manages customer relations and ensures smooth delivery of all subscriptions.</p>
+            </div>
+            <div class="team-member">
+              <div class="team-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <h4 class="team-name">Ahmed Khan</h4>
+              <p class="team-role">Technical Support</p>
+              <p class="team-bio">Provides 24/7 technical support and ensures customer satisfaction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="section bg-dark">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="section-title">Customer Reviews</h2>
+          <p class="section-subtitle">See what our customers say about our services</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="review-header">
+              <div class="review-avatar">AR</div>
+              <div>
+                <h4 class="font-bold">Ahmed R.</h4>
+                <div class="review-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">"Got my Netflix subscription within 5 minutes of payment. Legit service and great support!"</p>
+          </div>
+          
+          <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="review-header">
+              <div class="review-avatar">SF</div>
+              <div>
+                <h4 class="font-bold">Sara F.</h4>
+                <div class="review-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">"Canva Pro for just 350 PKR! Working perfectly for my design business. Thank you GROWZIO!"</p>
+          </div>
+          
+          <div class="review-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="review-header">
+              <div class="review-avatar">BK</div>
+              <div>
+                <h4 class="font-bold">Bilal K.</h4>
+                <div class="review-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">"ChatGPT Plus at an amazing price. Delivery was instant and the account is working flawlessly."</p>
+          </div>
         </div>
       </div>
     </section>
@@ -375,12 +546,19 @@
           <div>
             <h3 class="text-white text-lg font-bold mb-4">GROWZIO</h3>
             <p class="mb-4">Your trusted source for premium digital services in Pakistan at affordable prices.</p>
+            <div class="text-sm">
+              <p><strong>Registered Business:</strong></p>
+              <p>GROWZIO PVT LTD</p>
+              <p>TRN: 41-022-8124-9</p>
+            </div>
           </div>
           <div>
             <h3 class="text-white text-lg font-bold mb-4">QUICK LINKS</h3>
             <ul class="space-y-2">
               <li><a href="#" class="text-gray-300 hover:text-primary" id="footer-home-link">Home</a></li>
               <li><a href="#apps" class="text-gray-300 hover:text-primary">Apps</a></li>
+              <li><a href="#about" class="text-gray-300 hover:text-primary">About Us</a></li>
+              <li><a href="#reviews" class="text-gray-300 hover:text-primary">Reviews</a></li>
               <li><a href="#faq" class="text-gray-300 hover:text-primary">FAQ</a></li>
               <li><a href="#contact" class="text-gray-300 hover:text-primary">Contact</a></li>
             </ul>
@@ -388,22 +566,22 @@
           <div>
             <h3 class="text-white text-lg font-bold mb-4">SUPPORT</h3>
             <ul class="space-y-2">
-              <li><a href="https://about.growzio.online/" target="_blank" class="text-gray-300 hover:text-primary">About</a></li>
+              <li><a href="#about" class="text-gray-300 hover:text-primary">About</a></li>
               <li><a href="http://privacypolicy.growzio.online/" target="_blank" class="text-gray-300 hover:text-primary">Privacy Policy</a></li>
               <li><a href="http://termsofservices.growzio.online/" target="_blank" class="text-gray-300 hover:text-primary">Terms of Service</a></li>
               <li><a href="https://refundpolicy.growzio.online/" target="_blank" class="text-gray-300 hover:text-primary">Refund Policy</a></li>
-              <li><a href="https://sociallinks.growzio.online/" target="_blank" class="text-gray-300 hover:text-primary">Social Links</a></li>
             </ul>
           </div>
           <div>
             <h3 class="text-white text-lg font-bold mb-4">CONTACT</h3>
             <p class="mb-2"><i class="fa-brands fa-whatsapp text-green-500 mr-2"></i> WhatsApp: +92 319 5179084</p>
-            <p class="mb-4"><i class="fa-solid fa-envelope text-primary mr-2"></i> Email: growzioteam@gmail.com</p>
+            <p class="mb-2"><i class="fa-solid fa-envelope text-primary mr-2"></i> Email: growzioteam@gmail.com</p>
+            <p class="mb-4"><i class="fa-solid fa-location-dot text-primary mr-2"></i> Office #12, DHA Phase 6, Karachi</p>
             <p class="text-sm">24/7 Support Available</p>
           </div>
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p>© 2025 GROWZIO. All rights reserved.</p>
+          <p>© 2025 GROWZIO. All rights reserved. Registered Business: GROWZIO PVT LTD - TRN: 41-022-8124-9</p>
         </div>
       </div>
     </footer>
@@ -541,7 +719,7 @@
     </div>
     <footer class="bg-dark text-white py-6 mt-8 border-t border-gray-800">
       <div class="container mx-auto px-4 text-center">
-        <p>© 2025 GROWZIO APPS. All rights reserved.</p>
+        <p>© 2025 GROWZIO APPS. All rights reserved. Registered Business: GROWZIO PVT LTD</p>
       </div>
     </footer>
   </div>
